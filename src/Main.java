@@ -5,29 +5,67 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter a number to print a triangle of requested size");
+        // Give user choice to choose diamond / triangle to draw
+        System.out.println("Enter Diamond or Triangle to draw desired shape");
 
         Scanner input = new Scanner(System.in);
         input.hasNext();
+        String line = input.nextLine().toLowerCase();
 
-        String line = input.nextLine();
+//        DiamondOrTriangle UserChoice = new DiamondOrTriangle(String line){
+//
+//        }
+        // code for drawing triangle
+        if (line.contains("triangle")) {
 
-        DrawTriangle triangle = new DrawTriangle();
+            System.out.println("Enter a number to print a triangle of requested size");
 
-        //Validate that line input is numeric
-        boolean Validate = triangle.ValidateDataType(line);
+            input.hasNext();
 
-        if(Validate){
-            //triangle.PrintTriangle(Integer.parseInt(line));
-            //triangle.PrintVerticalAsterisks(Integer.parseInt(line));
-            triangle.PrintRightTriangle(Integer.parseInt(line));
-            System.exit(0);
+            String line1 = input.nextLine();
+
+            DrawTriangle triangle = new DrawTriangle();
+
+            //Validate that line input is numeric
+            boolean Validate = triangle.ValidateDataType(line1);
+
+            if (Validate) {
+                //triangle.PrintTriangle(Integer.parseInt(line));
+                //triangle.PrintVerticalAsterisks(Integer.parseInt(line));
+                triangle.PrintRightTriangle(Integer.parseInt(line1));
+                System.exit(0);
+            } else {
+                System.out.println("Invalid input");
+                System.exit(0);
+            }
         }
+
+        // code for drawing diamond
+        if (line.contains("diamond")) {
+
+            System.out.println("Enter a number to print a diamond of requested size");
+
+            input.hasNext();
+
+            String line1 = input.nextLine();
+
+            DrawDiamond diamond = new DrawDiamond();
+
+            //Validate that line input is numeric
+            boolean Validate = diamond.ValidateDataType(line1);
+
+            if (Validate) {
+                System.out.println("testing");
+                System.exit(0);
+            } else {
+                System.out.println("Invalid input");
+                System.exit(0);
+            }
+        }
+
         else {
-            System.out.println("Invalid input");
-            System.exit(0);
+                System.out.println("Invalid input");
+                System.exit(0);
         }
     }
-
-
 }
