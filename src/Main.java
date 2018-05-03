@@ -12,9 +12,6 @@ public class Main {
         input.hasNext();
         String line = input.nextLine().toLowerCase();
 
-//        DiamondOrTriangle UserChoice = new DiamondOrTriangle(String line){
-//
-//        }
         // code for drawing triangle
         if (line.contains("triangle")) {
 
@@ -55,7 +52,7 @@ public class Main {
             boolean Validate = diamond.ValidateDataType(line1);
 
             if (Validate) {
-                System.out.println("testing");
+                diamond.PrintIsoscelesTriangle(Integer.parseInt(line1));
                 System.exit(0);
             } else {
                 System.out.println("Invalid input");
