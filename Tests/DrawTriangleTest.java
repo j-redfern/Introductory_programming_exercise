@@ -12,7 +12,7 @@ public class DrawTriangleTest {
     }
 
     @Test
-    void PrintsNoOfAsteriskAsPerInputValue(){
+    void PrintsAsteriskHorizontally(){
 
         DrawTriangle triangle = new DrawTriangle();
         assertEquals("**", triangle.PrintTriangle(2));
@@ -24,6 +24,28 @@ public class DrawTriangleTest {
         DrawTriangle triangle = new DrawTriangle();
         ArrayList<String> AsteriskLine = triangle.PrintVerticalAsterisks(2);
         assertEquals("*",AsteriskLine.get(0));
+        assertEquals("*",AsteriskLine.get(1));
     }
 
+    @Test
+    void PrintsRightTriangle(){
+        DrawTriangle triangle = new DrawTriangle();
+        ArrayList<String> AsteriskLine = triangle.PrintRightTriangle(4);
+        assertEquals("*",AsteriskLine.get(0));
+        assertEquals("**",AsteriskLine.get(1));
+        assertEquals("***",AsteriskLine.get(2));
+        assertEquals("****",AsteriskLine.get(3));
+    }
+
+    @Test
+    void ValidateOnlyAcceptNumericInput(){
+        DrawTriangle triangle = new DrawTriangle();
+
+        boolean Validate = triangle.ValidateDataType("3");
+        assertEquals(true, Validate);
+
+        boolean InvalidValidate = triangle.ValidateDataType("input");
+        assertEquals(false, InvalidValidate);
+
+    }
 }

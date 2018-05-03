@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +14,19 @@ public class Main {
 
         DrawTriangle triangle = new DrawTriangle();
 
-        triangle.PrintVerticalAsterisks(Integer.parseInt(line));
+        //Validate that line input is numeric
+        boolean Validate = triangle.ValidateDataType(line);
 
-        System.exit(0);
+        if(Validate){
+            //triangle.PrintTriangle(Integer.parseInt(line));
+            //triangle.PrintVerticalAsterisks(Integer.parseInt(line));
+            triangle.PrintRightTriangle(Integer.parseInt(line));
+            System.exit(0);
+        }
+        else {
+            System.out.println("Invalid input");
+            System.exit(0);
+        }
     }
 
 
