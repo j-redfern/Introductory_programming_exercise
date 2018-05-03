@@ -52,7 +52,8 @@ public class Main {
             boolean Validate = diamond.ValidateDataType(line1);
 
             if (Validate) {
-                diamond.PrintIsoscelesTriangle(Integer.parseInt(line1));
+                //diamond.PrintIsoscelesTriangle(Integer.parseInt(line1));
+                diamond.PrintDiamond(Integer.parseInt(line1));
                 System.exit(0);
             } else {
                 System.out.println("Invalid input");
