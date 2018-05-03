@@ -12,7 +12,9 @@ public class Main {
         String line = input.nextLine();
 
         DrawTriangle triangle = new DrawTriangle();
-        System.out.println(triangle.PrintTriangle(Integer.parseInt(line)));
+
+        triangle.PrintVerticalAsterisks(Integer.parseInt(line));
+
         System.exit(0);
     }
 

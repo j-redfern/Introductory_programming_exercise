@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-
+import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class DrawTriangleTest {
@@ -19,5 +19,11 @@ public class DrawTriangleTest {
         assertEquals("*****", triangle.PrintTriangle(5));
     }
 
+    @Test
+    void PrintsAsterisksVertically(){
+        DrawTriangle triangle = new DrawTriangle();
+        ArrayList<String> AsteriskLine = triangle.PrintVerticalAsterisks(2);
+        assertEquals("*",AsteriskLine.get(0));
+    }
 
 }
