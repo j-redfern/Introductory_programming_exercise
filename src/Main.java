@@ -53,7 +53,8 @@ public class Main {
 
             if (Validate) {
                 //diamond.PrintIsoscelesTriangle(Integer.parseInt(line1));
-                diamond.PrintDiamond(Integer.parseInt(line1));
+                //diamond.PrintDiamond(Integer.parseInt(line1));
+                diamond.PrintDiamondWithName(Integer.parseInt(line1));
                 System.exit(0);
             } else {
                 System.out.println("Invalid input");

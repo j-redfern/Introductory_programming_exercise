@@ -34,4 +34,15 @@ public class DrawDiamondTest {
         assertEquals(" ***", AsteriskLine.get(3));
         assertEquals("  *", AsteriskLine.get(4));
     }
+
+    @Test
+    void PrintDiamondWithName(){
+        DrawDiamond diamond = new DrawDiamond();
+        ArrayList<String> AsteriskLine = diamond.PrintDiamondWithName(3);
+        assertEquals("  *", AsteriskLine.get(0));
+        assertEquals(" ***", AsteriskLine.get(1));
+        assertEquals("Jenni", AsteriskLine.get(2));
+        assertEquals(" ***", AsteriskLine.get(3));
+        assertEquals("  *", AsteriskLine.get(4));
+    }
 }
